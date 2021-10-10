@@ -55,9 +55,10 @@ class OffenceManager(models.Manager):
 
 
 class Offence(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     date = models.DateTimeField(auto_now_add=True)
-    trip = models.ForeignKey(Trip, on_delete=models.CASCADE)
+    trip = models.OneToOneField(
+        Trip, on_delete=models.CASCADE, primary_key=True)
 
     objects = OffenceManager()
 
