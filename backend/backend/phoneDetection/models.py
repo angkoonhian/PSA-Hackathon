@@ -5,10 +5,13 @@ from django.utils import timezone
 
 # Create your models here.
 
+
 class DriverManager(models.Manager):
     def create_driver(self, name, email, location, phone):
-        driver = self.create(name = name, email = email, location = location, phone = phone)
+        driver = self.create(name=name, email=email,
+                             location=location, phone=phone)
         return driver
+
 
 class Driver(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -23,10 +26,13 @@ class Driver(models.Model):
     def _str_(self):
         return self.id + self.name
 
+
 class TripManager(models.Manager):
-    def create_trip(self, title, date, driver):
-        trip = self.create(title = title, date = date, driver = driver)
+    def create_trip(self, title, dateStart, dateEnd, driver):
+        trip = self.create(title=title, dateStart=dateStart,
+                           dateEnd=dateEnd, driver=driver)
         return trip
+
 
 class Trip(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -41,10 +47,12 @@ class Trip(models.Model):
     def _str_(self):
         return self.id + self.title
 
+
 class OffenceManager(models.Manager):
     def create_offence(self, trip):
-        offence = self.create(trip = trip)
+        offence = self.create(trip=trip)
         return offence
+
 
 class Offence(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

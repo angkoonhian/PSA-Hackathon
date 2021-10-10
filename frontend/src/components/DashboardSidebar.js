@@ -24,9 +24,9 @@ import {
 import NavItem from './NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  // avatar: '/static/images/avatars/avatar_6.png',
+  jobTitle: 'Senior Manager',
+  name: 'Ang Koon Hian'
 };
 
 const items = [
@@ -38,13 +38,13 @@ const items = [
   {
     href: '/app/customers',
     icon: UsersIcon,
-    title: 'Customers'
+    title: 'Drivers'
   },
-  {
-    href: '/app/products',
-    icon: ShoppingBagIcon,
-    title: 'Products'
-  },
+  // {
+  //   href: '/app/products',
+  //   icon: ShoppingBagIcon,
+  //   title: 'Products'
+  // },
   {
     href: '/app/account',
     icon: UserIcon,

@@ -4,6 +4,7 @@
   "licence": "MIT",
   "version": "1.0.0",
   "private": false,
+  "proxy": "http://localhost:8000/",
   "scripts": {
     "eslint": "eslint ./src",
     "eslint-fix": "eslint --fix ./src",
@@ -36,6 +37,7 @@
     "@material-ui/icons": "^5.0.0-beta.5",
     "@material-ui/styles": "^5.0.0-beta.5",
     "@mui/material": "^5.0.3",
+    "axios": "^0.21.1",
     "chart.js": "^3.5.1",
     "formik": "^2.1.5",
     "history": "^5.0.0",
