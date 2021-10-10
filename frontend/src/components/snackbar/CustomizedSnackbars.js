@@ -92,7 +92,7 @@ const CustomizedSnackbars = () => {
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
       <Button variant="outlined" onClick={handleClick}>
-        Open success snackbar
+        Test Driver Violation Signal
       </Button>
       <Snackbar open={open} autoHideDuration={12000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>

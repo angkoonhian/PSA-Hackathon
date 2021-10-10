@@ -124,9 +124,7 @@ const CustomerListResults = ({ customers, ...rest }) => {
                     </Box>
                   </TableCell>
                   <TableCell>{customer.email}</TableCell>
-                  <TableCell>
-                    {`${customer.address.city}, ${customer.address.state}, ${customer.address.country}`}
-                  </TableCell>
+                  <TableCell>{customer.address}</TableCell>
                   <TableCell>{customer.phone}</TableCell>
                   <TableCell>
                     {moment(customer.createdAt).format('DD/MM/YYYY')}

@@ -6,6 +6,43 @@ import customers from '../__mocks__/customers';
 import { useEffect, useState } from 'react';
 
 const CustomerList = () => {
+  function randomIntFromInterval(min, max) {
+    // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  const avatarArray = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10'
+  ];
   const [customers, setCustomers] = useState([]);
   useEffect(async () => {
     try {
@@ -15,20 +52,16 @@ const CustomerList = () => {
       console.log('drivers: ', todoList);
       let processed = [];
 
-      todoList.map((value) => {
+      todoList.map((value, index) => {
         let driver = {
           date: value.date,
           email: value.email,
           id: value.id,
           name: value.name,
           phone: 98765432,
-          address: {
-            country: 'Singapore',
-            state: 'Bedok',
-            city: 'Street 41',
-            street: '2849 Fulton Street'
-          },
-          avatarUrl: '/static/images/avatars/avatar_3.png',
+          address: value.location,
+          avatarUrl:
+            '/static/images/avatars/avatar_' + avatarArray[index] + '.png',
           createdAt: 1555016400000
         };
         processed.push(driver);
