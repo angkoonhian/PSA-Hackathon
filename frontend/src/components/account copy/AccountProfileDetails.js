@@ -47,7 +47,7 @@ const AccountProfileDetails = (props) => {
       <Card>
         <CardHeader
           subheader="The information can be edited"
-          title="Add a trip"
+          title="Add a driver"
         />
         <Divider />
         <CardContent>
@@ -55,23 +55,12 @@ const AccountProfileDetails = (props) => {
             <Grid item md={6} xs={12}>
               <TextField
                 fullWidth
-                helperText="Please specify trip name"
-                label="Trip name"
+                helperText="Please specify driver name"
+                label="Driver name"
                 name="tripName"
                 onChange={handleChange}
                 required
                 value={values.tripName}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid item md={6} xs={12}>
-              <TextField
-                fullWidth
-                label="Driver name"
-                name="name"
-                onChange={handleChange}
-                required
-                value={values.name}
                 variant="outlined"
               />
             </Grid>
@@ -118,7 +107,7 @@ const AccountProfileDetails = (props) => {
             p: 2
           }}
         >
-          <Button color="primary" variant="contained" onClick={() => addTrip()}>
+          <Button color="primary" variant="contained">
             Save details
           </Button>
         </Box>

@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet';
 import { Box, Container, Grid } from '@material-ui/core';
-import AccountProfile from '../components/account/AccountProfile';
-import AccountProfileDetails from '../components/account/AccountProfileDetails';
+import AccountProfile from '../components/account copy/AccountProfile';
+import AccountProfileDetails from '../components/account copy/AccountProfileDetails';
 
-const Account = () => (
+const Driver = () => (
   <>
     <Helmet>
       <title>Account | Material Kit</title>
@@ -26,4 +26,4 @@ const Account = () => (
   </>
 );
 
-export default Account;
+export default Driver;

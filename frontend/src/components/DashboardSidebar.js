@@ -48,7 +48,12 @@ const items = [
   {
     href: '/app/account',
     icon: UserIcon,
-    title: 'Account'
+    title: 'Add a trip'
+  },
+  {
+    href: '/app/driver',
+    icon: ShoppingBagIcon,
+    title: 'Add a driver'
   },
   {
     href: '/app/settings',
